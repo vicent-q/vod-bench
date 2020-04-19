@@ -39,7 +39,7 @@ class Video_To_Bench(threading.Thread):
             elif(sysstr == "Linux"):
                 subprocess.call('./ffmpeg -re -stream_loop -1 -i \"%s\" -c:v copy -c:a copy -bsf:a aac_adtstoasc -y -f flv -timeout 4000 /dev/null 2>/dev/null' %liveAddr,stdout=subprocess.PIPE,shell=True)
         except Exception as e:
-            wiriteLog('ERROR',str(e))
+            WriteLog('ERROR',str(e))
         self.queue.task_done()
 
 
