@@ -46,7 +46,7 @@ class Video_To_Bench(threading.Thread):
 if __name__ == "__main__":
     time.sleep(SLEEP_TIME)
 
-    print "%d 个 %s 进程开始运行........" %(THREAD_NUM, Video_To_Bench)
+    #print "%d 个 %s 进程开始运行........" %(THREAD_NUM, Video_To_Bench)
     for i in xrange(THREAD_NUM):
         videotobench = Video_To_Bench(queue)
         videotobench.setDaemon(True)
